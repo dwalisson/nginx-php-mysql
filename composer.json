@@ -1,0 +1,11 @@
+{
+    "name": "newapp/newapp",
+    "scripts": {
+        "serve": "php -S 127.0.0.1:8000 -t public"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}
