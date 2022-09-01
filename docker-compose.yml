@@ -17,7 +17,8 @@ services:
       args:
         user: diego
         uid: 1000
-      dockerfile: ./php/Dockerfile    
+      context: ./php
+      dockerfile: Dockerfile    
     restart: unless-stopped
     volumes:
       - ./app:/var/www/app
