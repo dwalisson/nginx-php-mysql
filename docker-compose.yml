@@ -13,7 +13,11 @@ services:
     depends_on:
       - php
   php:
-    build: ./php
+    build:
+      args:
+        user: diego
+        uid: 1000
+      dockerfile: ./php/Dockerfile    
     restart: unless-stopped
     volumes:
       - ./app:/var/www/app
