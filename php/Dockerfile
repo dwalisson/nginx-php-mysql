@@ -3,7 +3,8 @@ FROM php:fpm
 ARG user
 ARG uid
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN apt-get update && apt-get install git libzip-dev zip -y
+RUN docker-php-ext-install pdo pdo_mysql zip
 RUN pecl install xdebug && docker-php-ext-enable opcache xdebug
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 
