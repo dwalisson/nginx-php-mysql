@@ -20,6 +20,8 @@ services:
       context: ./php
       dockerfile: Dockerfile    
     restart: unless-stopped
+    deploy:
+      replicas: 5
     volumes:
       - ./app:/var/www/app
     depends_on:
