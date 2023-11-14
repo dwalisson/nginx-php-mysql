@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   web:
-    image: nginx:latest
+    image: nginx:stable-alpine
     restart: unless-stopped
     ports:
       - 80:80
